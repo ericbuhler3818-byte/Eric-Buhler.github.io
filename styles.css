@@ -1,0 +1,82 @@
+.album-art {
+  width: 750px;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.tracklist {
+  width: 600px;              /* wider */
+  margin: 30px auto;
+  text-align: left;
+}
+
+.track {
+  background-color: #e2fafe; /* soft white */
+  color: black;              /* black text */
+  padding: 15px 20px;        /* bigger */
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  font-weight: 520;           
+}
+
+.track span {
+  color: #777;
+  margin-right: 15px;
+  width: 30px;
+}
+
+body {
+  background-image: url("images/image3.jpeg");
+  background-size: cover;        /* fills whole screen */
+  background-position: center;   /* keeps it centered */
+  background-repeat: no-repeat;
+  background-attachment: fixed;  /* cool subtle parallax effect */
+  
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+
+  z-index: -1;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 80px; /* space before h2 */
+}
+
+h2 {
+  margin-top: 40px; /* space above */
+}
+
+.bio {
+  max-width: 750px;
+  margin: 20px auto 60px;
+  padding: 15px 20px;
+  font-size: 19px;      /* slightly larger */
+  font-weight: 520;     /* a little bold (not too heavy) */
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.2px;
+  margin-bottom: 80px;
+}
