@@ -1,33 +1,41 @@
 .album-art {
-  width: 750px;
+  width: 700px;
   height: auto;
   border-radius: 20px;
-  margin-top: 10px;
+  margin-top: 15px;
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
 }
 
 .tracklist {
-  width: 600px;              /* wider */
-  margin: 30px auto;
+  width: 600px;
+  margin: 30px auto 80px; /* added bottom space */
   text-align: left;
 }
 
 .track {
-  background-color: #e2fafe; /* soft white */
-  color: black;              /* black text */
-  padding: 15px 20px;        /* bigger */
-  margin-bottom: 12px;
+  background-color: #ffffff8e;
+  color: black;
+  padding: 16px 22px;
+  margin-bottom: 14px;
   border-radius: 12px;
   display: flex;
   align-items: center;
-  font-size: 19px;
-  font-weight: 520;           
+  font-size: 20px;         /* slightly bigger */
+  font-weight: 600;        /* cleaner bold */
+  letter-spacing: 0.3px;   /* subtle polish */
+  transition: all 0.2s ease;
 }
 
 .track span {
-  color: #777;
-  margin-right: 15px;
-  width: 30px;
+  color: #555;
+  margin-right: 18px;
+  width: 35px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.track {
+  backdrop-filter: blur(6px);
 }
 
 body {
@@ -56,16 +64,24 @@ body::before {
 }
 
 h1 {
-  margin-bottom: 10px;
+  margin: 0;                 /* remove default spacing */
+  padding: 20px 0;           /* give it height */
+  font-size: 38px;
+
+  background-color: black;
+  width: 100%;               /* stretch across screen */
 }
 
 p {
   margin-top: 0;
   margin-bottom: 80px; /* space before h2 */
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
 }
 
 h2 {
   margin-top: 40px; /* space above */
+  font-size: 25px;
+  margin-bottom: 40px;
 }
 
 .bio {
@@ -79,4 +95,59 @@ h2 {
   backdrop-filter: blur(4px);
   letter-spacing: 0.2px;
   margin-bottom: 80px;
+}
+
+h3 {
+  font-size: 23px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+  font-weight: 750;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  height: 55px;
+  background: rgba(0, 0, 0, 0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+.bottom-pfp {
+  position: absolute;
+  left: 15px;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bottom-text {
+  font-size: 14px;
+  color: white;
+  letter-spacing: 0.3px;
+}
+
+.bottom-text a {
+  color: #1db954; /* Spotify green 👀 */
+  text-decoration: none;
+  margin: 0 6px;
+  transition: 0.2s;
+}
+
+.bottom-text a:hover {
+  text-decoration: underline;
+}
+
+body {
+  padding-bottom: 70px;
+  margin: 0;
 }
